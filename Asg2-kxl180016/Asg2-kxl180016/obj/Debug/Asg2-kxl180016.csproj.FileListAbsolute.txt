@@ -1,0 +1,9 @@
+D:\homework\2020 spring\Asg2-kxl180016\Asg2-kxl180016\bin\Debug\Asg2-kxl180016.exe.config
+D:\homework\2020 spring\Asg2-kxl180016\Asg2-kxl180016\bin\Debug\Asg2-kxl180016.exe
+D:\homework\2020 spring\Asg2-kxl180016\Asg2-kxl180016\bin\Debug\Asg2-kxl180016.pdb
+D:\homework\2020 spring\Asg2-kxl180016\Asg2-kxl180016\obj\Debug\Asg2-kxl180016.csprojAssemblyReference.cache
+D:\homework\2020 spring\Asg2-kxl180016\Asg2-kxl180016\obj\Debug\Asg2_kxl180016.Form1.resources
+D:\homework\2020 spring\Asg2-kxl180016\Asg2-kxl180016\obj\Debug\Asg2_kxl180016.Properties.Resources.resources
+D:\homework\2020 spring\Asg2-kxl180016\Asg2-kxl180016\obj\Debug\Asg2-kxl180016.csproj.GenerateResource.cache
+D:\homework\2020 spring\Asg2-kxl180016\Asg2-kxl180016\obj\Debug\Asg2-kxl180016.exe
+D:\homework\2020 spring\Asg2-kxl180016\Asg2-kxl180016\obj\Debug\Asg2-kxl180016.pdb
