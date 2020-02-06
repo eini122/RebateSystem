@@ -53,5 +53,20 @@ namespace Asg2_kxl180016
             }
 
         }
+
+        private void ProofCheck(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)13)
+            {
+                if (ProofBox.Checked)
+                {
+                    ProofBox.Checked = false;
+                }
+                else
+                {
+                    ProofBox.Checked = true;
+                }
+            }
+        }
     }
 }
