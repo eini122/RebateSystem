@@ -36,6 +36,15 @@ namespace Asg2_kxl180016
             this.Proof = proof;
             this.Data = data;
         }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(firstName).Append(",").Append(middleName).Append(",").Append(lastName).Append(",");
+            sb.Append(gender).Append(",").Append(phone).Append(",").Append(email).Append(",");
+            sb.Append(address.ToString()).Append(",").Append("Proof: ").Append(proof).Append(",");
+            sb.Append(data);
+            return sb.ToString();
+        }
 
         public string FirstName { get => firstName; set => firstName = value; }
         public char MiddleName { get => middleName; set => middleName = value; }

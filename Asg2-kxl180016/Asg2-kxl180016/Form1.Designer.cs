@@ -57,15 +57,21 @@
             this.EmailBox = new System.Windows.Forms.TextBox();
             this.ProofBox = new System.Windows.Forms.CheckBox();
             this.Date = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.NameList = new System.Windows.Forms.ListBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Data = new System.Windows.Forms.DateTimePicker();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // FName
             // 
             this.FName.AutoSize = true;
             this.FName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FName.Location = new System.Drawing.Point(417, 22);
+            this.FName.Location = new System.Drawing.Point(12, 15);
             this.FName.Name = "FName";
             this.FName.Size = new System.Drawing.Size(68, 12);
             this.FName.TabIndex = 0;
@@ -75,7 +81,7 @@
             // 
             this.FNameBox.AcceptsTab = true;
             this.FNameBox.BackColor = System.Drawing.SystemColors.Window;
-            this.FNameBox.Location = new System.Drawing.Point(417, 38);
+            this.FNameBox.Location = new System.Drawing.Point(11, 30);
             this.FNameBox.MaxLength = 20;
             this.FNameBox.Name = "FNameBox";
             this.FNameBox.Size = new System.Drawing.Size(217, 20);
@@ -86,7 +92,7 @@
             // 
             this.LName.AutoSize = true;
             this.LName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.LName.Location = new System.Drawing.Point(417, 112);
+            this.LName.Location = new System.Drawing.Point(378, 15);
             this.LName.Name = "LName";
             this.LName.Size = new System.Drawing.Size(67, 12);
             this.LName.TabIndex = 0;
@@ -95,7 +101,7 @@
             // LNameBox
             // 
             this.LNameBox.AcceptsTab = true;
-            this.LNameBox.Location = new System.Drawing.Point(417, 128);
+            this.LNameBox.Location = new System.Drawing.Point(378, 31);
             this.LNameBox.MaxLength = 20;
             this.LNameBox.Name = "LNameBox";
             this.LNameBox.Size = new System.Drawing.Size(217, 20);
@@ -105,7 +111,7 @@
             // 
             this.Middle.AutoSize = true;
             this.Middle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.Middle.Location = new System.Drawing.Point(417, 67);
+            this.Middle.Location = new System.Drawing.Point(265, 16);
             this.Middle.Name = "Middle";
             this.Middle.Size = new System.Drawing.Size(77, 12);
             this.Middle.TabIndex = 0;
@@ -114,7 +120,7 @@
             // MiddleBox
             // 
             this.MiddleBox.AcceptsTab = true;
-            this.MiddleBox.Location = new System.Drawing.Point(417, 83);
+            this.MiddleBox.Location = new System.Drawing.Point(265, 32);
             this.MiddleBox.MaxLength = 1;
             this.MiddleBox.Name = "MiddleBox";
             this.MiddleBox.Size = new System.Drawing.Size(20, 20);
@@ -125,7 +131,7 @@
             // 
             this.streetName.AutoSize = true;
             this.streetName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.streetName.Location = new System.Drawing.Point(417, 302);
+            this.streetName.Location = new System.Drawing.Point(12, 122);
             this.streetName.Name = "streetName";
             this.streetName.Size = new System.Drawing.Size(54, 12);
             this.streetName.TabIndex = 0;
@@ -134,35 +140,38 @@
             // streetNameBox
             // 
             this.streetNameBox.AcceptsTab = true;
-            this.streetNameBox.Location = new System.Drawing.Point(417, 318);
+            this.streetNameBox.Location = new System.Drawing.Point(12, 138);
             this.streetNameBox.MaxLength = 35;
             this.streetNameBox.Name = "streetNameBox";
-            this.streetNameBox.Size = new System.Drawing.Size(217, 20);
+            this.streetNameBox.Size = new System.Drawing.Size(276, 20);
             this.streetNameBox.TabIndex = 7;
             // 
             // streetNameBox2
             // 
             this.streetNameBox2.AcceptsTab = true;
-            this.streetNameBox2.Location = new System.Drawing.Point(417, 344);
+            this.streetNameBox2.Location = new System.Drawing.Point(12, 175);
             this.streetNameBox2.MaxLength = 35;
             this.streetNameBox2.Name = "streetNameBox2";
-            this.streetNameBox2.Size = new System.Drawing.Size(217, 20);
+            this.streetNameBox2.Size = new System.Drawing.Size(276, 20);
             this.streetNameBox2.TabIndex = 8;
             // 
             // Add
             // 
             this.Add.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Add.Location = new System.Drawing.Point(133, 637);
+            this.Add.Location = new System.Drawing.Point(80, 504);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(96, 28);
             this.Add.TabIndex = 14;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            this.Add.Enter += new System.EventHandler(this.Add_Click);
             // 
             // Modify
             // 
+            this.Modify.Enabled = false;
             this.Modify.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Modify.Location = new System.Drawing.Point(298, 637);
+            this.Modify.Location = new System.Drawing.Point(245, 504);
             this.Modify.Name = "Modify";
             this.Modify.Size = new System.Drawing.Size(96, 28);
             this.Modify.TabIndex = 15;
@@ -171,8 +180,9 @@
             // 
             // Delete
             // 
+            this.Delete.Enabled = false;
             this.Delete.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Delete.Location = new System.Drawing.Point(472, 637);
+            this.Delete.Location = new System.Drawing.Point(419, 504);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(96, 28);
             this.Delete.TabIndex = 16;
@@ -184,7 +194,7 @@
             this.Warning.AutoSize = true;
             this.Warning.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Warning.ForeColor = System.Drawing.Color.Red;
-            this.Warning.Location = new System.Drawing.Point(232, 603);
+            this.Warning.Location = new System.Drawing.Point(179, 470);
             this.Warning.Name = "Warning";
             this.Warning.Size = new System.Drawing.Size(70, 15);
             this.Warning.TabIndex = 0;
@@ -195,7 +205,7 @@
             // 
             this.optional.AutoSize = true;
             this.optional.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.optional.Location = new System.Drawing.Point(448, 90);
+            this.optional.Location = new System.Drawing.Point(296, 39);
             this.optional.Name = "optional";
             this.optional.Size = new System.Drawing.Size(58, 12);
             this.optional.TabIndex = 0;
@@ -205,7 +215,7 @@
             // 
             this.City.AutoSize = true;
             this.City.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.City.Location = new System.Drawing.Point(417, 372);
+            this.City.Location = new System.Drawing.Point(320, 122);
             this.City.Name = "City";
             this.City.Size = new System.Drawing.Size(26, 12);
             this.City.TabIndex = 0;
@@ -213,17 +223,17 @@
             // 
             // CityBox
             // 
-            this.CityBox.Location = new System.Drawing.Point(417, 388);
+            this.CityBox.Location = new System.Drawing.Point(320, 138);
             this.CityBox.MaxLength = 25;
             this.CityBox.Name = "CityBox";
-            this.CityBox.Size = new System.Drawing.Size(217, 20);
+            this.CityBox.Size = new System.Drawing.Size(195, 20);
             this.CityBox.TabIndex = 9;
             // 
             // State
             // 
             this.State.AutoSize = true;
             this.State.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.State.Location = new System.Drawing.Point(417, 412);
+            this.State.Location = new System.Drawing.Point(540, 121);
             this.State.Name = "State";
             this.State.Size = new System.Drawing.Size(37, 12);
             this.State.TabIndex = 0;
@@ -233,7 +243,7 @@
             // 
             this.Zip.AutoSize = true;
             this.Zip.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.Zip.Location = new System.Drawing.Point(417, 463);
+            this.Zip.Location = new System.Drawing.Point(320, 158);
             this.Zip.Name = "Zip";
             this.Zip.Size = new System.Drawing.Size(57, 12);
             this.Zip.TabIndex = 0;
@@ -242,25 +252,25 @@
             // StateBox
             // 
             this.StateBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.StateBox.Location = new System.Drawing.Point(417, 429);
+            this.StateBox.Location = new System.Drawing.Point(540, 138);
             this.StateBox.MaxLength = 2;
             this.StateBox.Name = "StateBox";
-            this.StateBox.Size = new System.Drawing.Size(217, 20);
+            this.StateBox.Size = new System.Drawing.Size(55, 20);
             this.StateBox.TabIndex = 10;
             // 
             // ZipBox
             // 
-            this.ZipBox.Location = new System.Drawing.Point(417, 480);
+            this.ZipBox.Location = new System.Drawing.Point(320, 175);
             this.ZipBox.MaxLength = 9;
             this.ZipBox.Name = "ZipBox";
-            this.ZipBox.Size = new System.Drawing.Size(217, 20);
+            this.ZipBox.Size = new System.Drawing.Size(275, 20);
             this.ZipBox.TabIndex = 11;
             // 
             // Gender
             // 
             this.Gender.AutoSize = true;
             this.Gender.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.Gender.Location = new System.Drawing.Point(417, 159);
+            this.Gender.Location = new System.Drawing.Point(11, 70);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(47, 12);
             this.Gender.TabIndex = 0;
@@ -269,7 +279,7 @@
             // GenderBox
             // 
             this.GenderBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.GenderBox.Location = new System.Drawing.Point(417, 176);
+            this.GenderBox.Location = new System.Drawing.Point(11, 85);
             this.GenderBox.MaxLength = 1;
             this.GenderBox.Name = "GenderBox";
             this.GenderBox.Size = new System.Drawing.Size(20, 20);
@@ -279,7 +289,7 @@
             // 
             this.GenderTip.AutoSize = true;
             this.GenderTip.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.GenderTip.Location = new System.Drawing.Point(448, 179);
+            this.GenderTip.Location = new System.Drawing.Point(42, 88);
             this.GenderTip.Name = "GenderTip";
             this.GenderTip.Size = new System.Drawing.Size(38, 12);
             this.GenderTip.TabIndex = 0;
@@ -289,7 +299,7 @@
             // 
             this.Phone.AutoSize = true;
             this.Phone.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.Phone.Location = new System.Drawing.Point(417, 204);
+            this.Phone.Location = new System.Drawing.Point(125, 71);
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(90, 12);
             this.Phone.TabIndex = 0;
@@ -297,17 +307,17 @@
             // 
             // PhoneBox
             // 
-            this.PhoneBox.Location = new System.Drawing.Point(417, 221);
+            this.PhoneBox.Location = new System.Drawing.Point(125, 86);
             this.PhoneBox.MaxLength = 21;
             this.PhoneBox.Name = "PhoneBox";
-            this.PhoneBox.Size = new System.Drawing.Size(217, 20);
+            this.PhoneBox.Size = new System.Drawing.Size(160, 20);
             this.PhoneBox.TabIndex = 5;
             // 
             // Email
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.Email.Location = new System.Drawing.Point(417, 249);
+            this.Email.Location = new System.Drawing.Point(318, 71);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(38, 12);
             this.Email.TabIndex = 0;
@@ -315,17 +325,17 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(417, 266);
+            this.EmailBox.Location = new System.Drawing.Point(320, 88);
             this.EmailBox.MaxLength = 60;
             this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(217, 20);
+            this.EmailBox.Size = new System.Drawing.Size(275, 20);
             this.EmailBox.TabIndex = 6;
             // 
             // ProofBox
             // 
             this.ProofBox.AutoSize = true;
             this.ProofBox.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.ProofBox.Location = new System.Drawing.Point(417, 521);
+            this.ProofBox.Location = new System.Drawing.Point(13, 216);
             this.ProofBox.Name = "ProofBox";
             this.ProofBox.Size = new System.Drawing.Size(178, 16);
             this.ProofBox.TabIndex = 12;
@@ -337,35 +347,78 @@
             // 
             this.Date.AutoSize = true;
             this.Date.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F);
-            this.Date.Location = new System.Drawing.Point(417, 552);
+            this.Date.Location = new System.Drawing.Point(257, 200);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(31, 12);
             this.Date.TabIndex = 0;
             this.Date.Text = "Date";
             // 
-            // textBox1
+            // listView1
             // 
-            this.textBox1.Location = new System.Drawing.Point(417, 569);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 20);
-            this.textBox1.TabIndex = 13;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(11, 254);
+            this.listView1.MultiSelect = false;
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(584, 191);
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listView1.TabIndex = 17;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // NameList
+            // columnHeader1
             // 
-            this.NameList.FormattingEnabled = true;
-            this.NameList.Location = new System.Drawing.Point(26, 38);
-            this.NameList.Name = "NameList";
-            this.NameList.Size = new System.Drawing.Size(368, 485);
-            this.NameList.TabIndex = 17;
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 120;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Gender";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Phone";
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Email";
+            this.columnHeader4.Width = 120;
+            // 
+            // Data
+            // 
+            this.Data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Data.Location = new System.Drawing.Point(259, 216);
+            this.Data.MaxDate = new System.DateTime(2200, 12, 31, 0, 0, 0, 0);
+            this.Data.MinDate = new System.DateTime(1800, 1, 1, 0, 0, 0, 0);
+            this.Data.Name = "Data";
+            this.Data.Size = new System.Drawing.Size(95, 20);
+            this.Data.TabIndex = 13;
+            this.Data.Value = new System.DateTime(2020, 2, 23, 23, 59, 59, 0);
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Proof";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Data";
+            this.columnHeader6.Width = 95;
             // 
             // Form1
             // 
             this.AccessibleName = "Rebate";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 689);
-            this.Controls.Add(this.NameList);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(620, 569);
+            this.Controls.Add(this.Data);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.Date);
             this.Controls.Add(this.ProofBox);
             this.Controls.Add(this.EmailBox);
@@ -397,6 +450,7 @@
             this.Controls.Add(this.FName);
             this.Name = "Form1";
             this.Text = "Rebate";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,8 +487,14 @@
         private System.Windows.Forms.TextBox EmailBox;
         private System.Windows.Forms.CheckBox ProofBox;
         private System.Windows.Forms.Label Date;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox NameList;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.DateTimePicker Data;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
 

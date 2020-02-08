@@ -23,6 +23,14 @@ namespace Asg2_kxl180016
             this.State = state;
             this.PostCode = postCode;
         }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(streetName).Append(",");
+            sb.Append(string.IsNullOrEmpty(apartemntName) ? "" : apartemntName).Append(",");
+            sb.Append(city).Append(",").Append(state).Append(",").Append(postCode);
+            return sb.ToString();
+        }
 
         public string StreetName { get => streetName; set => streetName = value; }
         public string ApartemntName { get => apartemntName; set => apartemntName = value; }
